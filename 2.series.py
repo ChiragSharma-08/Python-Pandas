@@ -5,7 +5,10 @@ import pandas as pd
 
 data = [100, 103,  104]
 
-series = pd.Series(data)
 series = pd.Series(data, index = ["a", "b", "c"])
 
-print(series)
+print(series.loc["a"])
+
+series.loc["a"] = 200
+
+print(series.loc["a"])
